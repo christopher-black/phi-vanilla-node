@@ -1,27 +1,18 @@
-var numOne = 4;
-var numTwo = 7;
-//console.log(numOne + numTwo);
-
-function multiply(x, y) {
-  return x * y;
-}
-
-//console.log(multiply(2, 4));
-
 // require navigates to file, finds exports
 // and returns result
-var someNumber = require('./some-number.js');
+var someNumber = require('./modules/utils/some-number.js');
 console.log(someNumber);
 
-var hello = require('./hello.js');
+var hello = require('./modules/utils/hello.js');
 console.log(hello);
 
-var someObject = require('./some-object.js');
+var someObject = require('./modules/utils/some-object.js');
 console.log(someObject);
 
-var someFunction = require('./some-function.js');
+var someFunction = require('./modules/utils/some-function.js');
 console.log(someFunction.greet("Chris"));
 
-var calc = require('./calculator.js');
+var calc = require('./modules/calculator.js');
 console.log(calc.multiply(3, 4));
 console.log(calc.divide(8, 4));
+console.log(calc.sayHello("Joe"));
