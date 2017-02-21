@@ -16,3 +16,11 @@ var calc = require('./modules/calculator.js');
 console.log(calc.multiply(3, 4));
 console.log(calc.divide(8, 4));
 console.log(calc.sayHello("Joe"));
+
+var http = require('http');
+var server = http.createServer(function(req, res){
+  res.writeHead(200);
+  res.write("Hello World");
+  res.end();
+})
+server.listen(5000);
